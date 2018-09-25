@@ -13,3 +13,8 @@ class Camera:
         self.id=id
         self.name=name
         self.full_name=full_name
+class Rover:
+    def __init__(self,id,name,landing):
+        self.id=id
+        self.name=name
+        self.landing=landing

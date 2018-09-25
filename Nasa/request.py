@@ -1,10 +1,10 @@
 import urllib.request,json
-from .models import Sources,Camera
-from functools import reduce
+from .models import Sources,Camera,Rover
+
 
 api_key = 'EPZMQv6VmlTFXhcGrZ4Jhu1BLZkIjbdjjqVRR2ck'
 
-nasa_base_url= 'https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&camera=fhaz&api_key={}'
+nasa_base_url= 'https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?earth_date=2015-6-3&api_key={}'
 
 def all_images():
     all_images=nasa_base_url.format(api_key)
@@ -15,6 +15,7 @@ def all_images():
 
         if get_source_response['photos']:
             sources_result=get_source_response['photos']
+
     return sources_result
 
 def all_camera(sources_result):
@@ -32,3 +33,15 @@ def all_camera(sources_result):
 
 
     return camera_results
+def all_rover(source_result):
+    rover_results=[]
+    for result in source_result:
+        details=result.get('rover')
+        id=details.get('id')
+        name=details.get('name')
+        landing=details.get('landing_date')
+        print(landing)
+        rover_object=Rover(id,name,landing)
+        rover_results.append(rover_object)
+        print(rover_results)
+    return rover_results

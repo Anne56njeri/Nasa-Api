@@ -24,8 +24,12 @@
 
 
   <div class="row row-flex">
-{% for rover in all_rovers %}
+
+    <p>{{landing_date}}</p>
+
 {% for camera in camera_details %}
+{% for rover in all_rovers %}
+
 
 
   <div class="col-md-4 col-sm-6 col-x6-12">
@@ -33,6 +37,8 @@
 
 <img src="{{rover.img_src}}" class="img-responsive"alt="Image">
 {{rover.id}}
+
+
 <p>{{ camera.name }}</p><p>{{camera.full_name}}</p>
 
 </div>
