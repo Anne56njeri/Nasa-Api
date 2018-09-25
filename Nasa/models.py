@@ -8,3 +8,9 @@ class Sources:
         self.camera=camera
         self.earth_date=earth_date
         self.img_src=img_src
+class Camera:
+    def __init__(self,id,name,full_name):
+        self.id=id
+        self.name=name
+        self.full_name=full_name
+        
