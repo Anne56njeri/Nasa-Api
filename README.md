@@ -30,7 +30,7 @@ then run  source virtual/bin/activate
 
 git clone https://github.com/Anne56njeri/Nasa-Api.git
 
-cd into Project
+cd into
 
 run pip install requirements.txt
 
