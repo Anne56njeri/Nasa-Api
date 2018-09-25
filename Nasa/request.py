@@ -1,5 +1,6 @@
 import urllib.request,json
 from .models import Sources,Camera
+from functools import reduce
 
 api_key = 'EPZMQv6VmlTFXhcGrZ4Jhu1BLZkIjbdjjqVRR2ck'
 
@@ -15,12 +16,19 @@ def all_images():
         if get_source_response['photos']:
             sources_result=get_source_response['photos']
     return sources_result
-def all_camera():
-    all_camera=nasa.base.url.format(api_key)
-    with urllib.request.urlopen(all_camera) as url:
-        all_camera_details=url.read()
-        get_camera_reponse=json.load(all_camera_details)
 
-        if get_camera_reponse['camera']:
-            camera_result=get_camera_reponse['camera']
-    return camera_result        
+def all_camera(sources_result):
+    camera_results=[]
+    for results in sources_result:
+        details=results.get('camera')
+        id=details.get('id')
+        name=details.get('name')
+        full_name=details.get('full_name')
+        print(full_name)
+        camera_object=Camera(id,name,full_name)
+        camera_results.append(camera_object)
+
+
+
+
+    return camera_results

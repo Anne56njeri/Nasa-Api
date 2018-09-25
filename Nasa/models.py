@@ -13,4 +13,3 @@ class Camera:
         self.id=id
         self.name=name
         self.full_name=full_name
-        
