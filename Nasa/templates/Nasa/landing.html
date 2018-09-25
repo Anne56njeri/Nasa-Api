@@ -13,7 +13,7 @@
 <div class="container">
 <div class="row">
   <div class="col-md-6">
-<p>{{title1}}</p>
+
   </div>
 
 </div>
@@ -24,20 +24,20 @@
 
 
   <div class="row row-flex">
+{% for rover in all_rovers %}
 
 
 
   <div class="col-md-4 col-sm-6 col-x6-12">
     <div class="card">
 
-<a href=" " class=""><img src="{{images}}" class="img-responsive"alt="Image"></a>
-     <p>{{one}}</p>
+<img src="{{rover.img_src}}" class="img-responsive"alt="Image">
+<p>{{ rover.sol }}</p>
 
 </div>
 </div>
 
-
-
+{% endfor %}
 </div>
 
 
