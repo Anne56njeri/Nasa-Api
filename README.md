@@ -32,8 +32,7 @@ git clone https://github.com/Anne56njeri/Nasa-Api.git
 
 cd into Project
 
-Install bootstrap3 by running the following command
-pip install django-bootstrap3
+run pip install requirements.txt
 
 run python manage.py run server
 
