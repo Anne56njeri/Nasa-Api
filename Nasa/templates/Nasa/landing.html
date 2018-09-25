@@ -25,18 +25,18 @@
 
   <div class="row row-flex">
 {% for rover in all_rovers %}
-
+{% for camera in camera_details%}
 
 
   <div class="col-md-4 col-sm-6 col-x6-12">
     <div class="card">
 
 <img src="{{rover.img_src}}" class="img-responsive"alt="Image">
-<p>{{ rover.sol }}</p>
+<p>{{ camera.name }}</p>
 
 </div>
 </div>
-
+{% endfor %}
 {% endfor %}
 </div>
 
