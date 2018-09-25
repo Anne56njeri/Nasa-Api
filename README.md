@@ -30,9 +30,10 @@ then run  source virtual/bin/activate
 
 git clone https://github.com/Anne56njeri/Nasa-Api.git
 
-cd into
+cd into Nasa-Api
 
-run pip install requirements.txt
+run pip install -r requirements.txt.
+
 
 run python manage.py run server
 
