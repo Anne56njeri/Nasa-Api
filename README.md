@@ -15,13 +15,25 @@ It has a list of images, the name of the camera that took the photo and the eart
 
 
 ## Project setup instructions:
-Install Virtual env in your local machine
+Install python3.6 in your machine for linux run the following command
+sudo apt-get install python3.6
+It will prompt you to enter your password and then press enter
 
-cd into virtual env
+
+Install Virtual env in your local machine by  running this command
+
+sudo apt-get install python-virtualenv
+
+then run  source virtual/bin/activate
+
+
 
 git clone https://github.com/Anne56njeri/Nasa-Api.git
 
-cd into project
+cd into Project
+
+Install bootstrap3 by running the following command
+pip install django-bootstrap3
 
 run python manage.py run server
 
@@ -34,7 +46,7 @@ click on the url  http://127.0.0.1:8000/
 Python3.6
 Django (framework for python)
 Bootstrap 3
-Nasa-Api 
+Nasa-Api
 
 
 
