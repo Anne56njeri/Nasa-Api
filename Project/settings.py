@@ -39,6 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'Nasa.apps.NasaConfig',
     'bootstrap3',
+    'aiohttp',
+    
 ]
 
 MIDDLEWARE = [
